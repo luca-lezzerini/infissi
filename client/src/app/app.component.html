@@ -1,0 +1,26 @@
+<div *ngIf="!preloader">
+  Modello
+  <input type="text" [(ngModel)]="infisso.modello" [disabled]="editModello">
+  <br>
+  Prezzo
+  <input type="number" [(ngModel)]="infisso.prezzo" [disabled]="editPrezzo">
+  <br>
+  <button (click)="conferma()" *ngIf="stato == 'M' || stato == 'A' || stato == 'R'">Conferma</button>
+  <button (click)="annulla()" *ngIf="stato == 'M' || stato == 'A' || stato == 'R'">Annulla</button>
+  <button (click)="aggiungi()" *ngIf="stato == 'V'">Aggiungi</button>
+  <h2 *ngIf="messaggio">{{messaggio}}</h2>
+  <table>
+    <tr *ngFor="let i of infissi">
+      <td>{{i.id}}</td>
+      <td>{{i.modello}}</td>
+      <td>{{i.prezzo}}</td>
+      <td>
+        <button (click)="modifica(i)">Modifica</button>
+        <button (click)="elimina(i)">Elimina</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="preloader">
+  In attesa della risposta dal server ...
+</div>

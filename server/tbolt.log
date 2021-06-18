@@ -1,0 +1,102 @@
+2021-06-18 09:37:23.641  INFO 18684 --- [main] com.example.esame.EsameApplication       : Starting EsameApplication using Java 15.0.1 on DESKTOP-ETE4PHS with PID 18684 (C:\Users\use\Desktop\esercitazione\server\target\classes started by use in C:\Users\use\Desktop\esercitazione\server)
+2021-06-18 09:37:23.656 DEBUG 18684 --- [main] com.example.esame.EsameApplication       : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-18 09:37:23.656  INFO 18684 --- [main] com.example.esame.EsameApplication       : No active profile set, falling back to default profiles: default
+2021-06-18 09:37:30.450 DEBUG 18684 --- [main] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=InnoDB
+2021-06-18 09:37:30.545 DEBUG 18684 --- [main] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2021-06-18 09:37:30.554 DEBUG 18684 --- [main] org.hibernate.SQL                        : create table test_entity (id bigint not null, num1 integer, num2 integer, result integer, primary key (id)) engine=InnoDB
+2021-06-18 09:37:31.381  WARN 18684 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-18 09:37:32.178  INFO 18684 --- [main] com.example.esame.EsameApplication       : Started EsameApplication in 9.763 seconds (JVM running for 10.452)
+2021-06-18 09:37:49.661 DEBUG 18684 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-06-18 09:37:49.668 DEBUG 18684 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-06-18 09:37:49.770 DEBUG 18684 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into test_entity (num1, num2, result, id) values (?, ?, ?, ?)
+2021-06-18 09:37:49.773 TRACE 18684 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [2]
+2021-06-18 09:37:49.774 TRACE 18684 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [3]
+2021-06-18 09:37:49.774 TRACE 18684 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [5]
+2021-06-18 09:37:49.785 TRACE 18684 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [1]
+2021-06-18 11:49:55.992  INFO 17592 --- [main] com.example.esame.EsameApplication       : Starting EsameApplication using Java 15.0.1 on DESKTOP-ETE4PHS with PID 17592 (C:\Users\use\Desktop\esercitazione\server\target\classes started by use in C:\Users\use\Desktop\esercitazione\server)
+2021-06-18 11:49:55.994 DEBUG 17592 --- [main] com.example.esame.EsameApplication       : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-18 11:49:55.994  INFO 17592 --- [main] com.example.esame.EsameApplication       : No active profile set, falling back to default profiles: default
+2021-06-18 11:50:00.490 DEBUG 17592 --- [main] org.hibernate.SQL                        : create table infisso (id bigint not null, modello varchar(255), prezzo double precision, primary key (id)) engine=InnoDB
+2021-06-18 11:50:01.364  WARN 17592 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-18 11:50:01.803  INFO 17592 --- [main] com.example.esame.EsameApplication       : Started EsameApplication in 6.401 seconds (JVM running for 6.84)
+2021-06-18 11:50:09.286 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 11:50:09.289 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [qweqweqw]
+2021-06-18 11:50:09.310 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-06-18 11:50:09.312 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-06-18 11:50:09.337 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into infisso (modello, prezzo, id) values (?, ?, ?)
+2021-06-18 11:50:09.338 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [qweqweqw]
+2021-06-18 11:50:09.339 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [1.0]
+2021-06-18 11:50:09.340 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [2]
+2021-06-18 11:50:09.343 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
+2021-06-18 11:51:13.683 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 11:51:13.684 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [asdasd]
+2021-06-18 11:51:13.686 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-06-18 11:51:13.687 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-06-18 11:51:13.697 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into infisso (modello, prezzo, id) values (?, ?, ?)
+2021-06-18 11:51:13.698 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [asdasd]
+2021-06-18 11:51:13.698 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [111.0]
+2021-06-18 11:51:13.698 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [3]
+2021-06-18 11:51:13.699 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
+2021-06-18 11:54:15.755 DEBUG 17592 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 11:54:15.756 TRACE 17592 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - []
+2021-06-18 11:54:15.757 DEBUG 17592 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-06-18 11:54:15.758 DEBUG 17592 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-06-18 11:54:15.762 DEBUG 17592 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into infisso (modello, prezzo, id) values (?, ?, ?)
+2021-06-18 11:54:15.763 TRACE 17592 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - []
+2021-06-18 11:54:15.764 TRACE 17592 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [0.0]
+2021-06-18 11:54:15.764 TRACE 17592 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [4]
+2021-06-18 11:54:15.765 DEBUG 17592 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
+2021-06-18 12:00:31.116 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:00:31.117 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [werwerwe]
+2021-06-18 12:00:31.119 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-06-18 12:00:31.120 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-06-18 12:00:31.124 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into infisso (modello, prezzo, id) values (?, ?, ?)
+2021-06-18 12:00:31.125 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [werwerwe]
+2021-06-18 12:00:31.125 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [234234.0]
+2021-06-18 12:00:31.125 TRACE 17592 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [5]
+2021-06-18 12:00:31.126 DEBUG 17592 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
+2021-06-18 12:01:34.145 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:01:34.146 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:01:34.147 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-06-18 12:01:34.148 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-06-18 12:01:34.152 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into infisso (modello, prezzo, id) values (?, ?, ?)
+2021-06-18 12:01:34.153 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:01:34.154 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [23.0]
+2021-06-18 12:01:34.154 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [6]
+2021-06-18 12:01:34.155 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
+2021-06-18 12:01:49.175 DEBUG 17592 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:01:49.176 TRACE 17592 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:01:57.063 DEBUG 17592 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:01:57.064 TRACE 17592 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:01:58.038 DEBUG 17592 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:01:58.039 TRACE 17592 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:01:58.382 DEBUG 17592 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:01:58.383 TRACE 17592 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:01:58.750 DEBUG 17592 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:01:58.750 TRACE 17592 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:02:02.398 DEBUG 17592 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:02:02.399 TRACE 17592 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa2]
+2021-06-18 12:02:02.400 DEBUG 17592 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-06-18 12:02:02.401 DEBUG 17592 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-06-18 12:02:02.414 DEBUG 17592 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into infisso (modello, prezzo, id) values (?, ?, ?)
+2021-06-18 12:02:02.414 TRACE 17592 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa2]
+2021-06-18 12:02:02.414 TRACE 17592 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [0.0]
+2021-06-18 12:02:02.415 TRACE 17592 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [7]
+2021-06-18 12:02:02.416 DEBUG 17592 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
+2021-06-18 12:02:09.908 DEBUG 17592 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:02:09.908 TRACE 17592 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:02:09.916 DEBUG 17592 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update infisso set modello=?, prezzo=? where id=?
+2021-06-18 12:02:09.917 TRACE 17592 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa]
+2021-06-18 12:02:09.917 TRACE 17592 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [230.0]
+2021-06-18 12:02:09.917 TRACE 17592 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [6]
+2021-06-18 12:02:09.919 DEBUG 17592 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
+2021-06-18 12:02:22.886 DEBUG 17592 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_ where infisso0_.modello=?
+2021-06-18 12:02:22.887 TRACE 17592 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sfafa2]
+2021-06-18 12:14:22.804  WARN 17592 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.example.esame.dto.ListaInfissiDto com.example.esame.controller.InfissoController.salvaNuovo(com.example.esame.dto.InfissoDto)]
+2021-06-18 12:14:28.242  WARN 17592 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.example.esame.dto.ListaInfissiDto com.example.esame.controller.InfissoController.salvaNuovo(com.example.esame.dto.InfissoDto)]
+2021-06-18 12:15:08.264  INFO 10132 --- [main] com.example.esame.EsameApplication       : Starting EsameApplication using Java 15.0.1 on DESKTOP-ETE4PHS with PID 10132 (C:\Users\use\Desktop\esercitazione\server\target\classes started by use in C:\Users\use\Desktop\esercitazione\server)
+2021-06-18 12:15:08.266 DEBUG 10132 --- [main] com.example.esame.EsameApplication       : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-18 12:15:08.266  INFO 10132 --- [main] com.example.esame.EsameApplication       : No active profile set, falling back to default profiles: default
+2021-06-18 12:15:12.715  WARN 10132 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-18 12:15:13.311  INFO 10132 --- [main] com.example.esame.EsameApplication       : Started EsameApplication in 5.704 seconds (JVM running for 6.163)
+2021-06-18 12:15:19.559 DEBUG 10132 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select infisso0_.id as id1_0_, infisso0_.modello as modello2_0_, infisso0_.prezzo as prezzo3_0_ from infisso infisso0_
